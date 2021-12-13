@@ -1,0 +1,28 @@
+def usdtoapex():
+    #a is the ammount in usd
+    coins = 0
+    packs = 0
+    usd = float(input())
+    while usd > 9.99:
+        if usd > 99.99:
+            usd-=99.99
+            coins+=11500
+        elif usd > 59.99:
+            usd-=59.99
+            coins+=6700
+        elif usd > 39.99:
+            usd-=39.99
+            coins+=4350
+        elif usd > 19.99:
+            usd-=19.99
+            coins+=2150
+        elif usd > 9.99:
+            usd-=9.99
+            coins+=1000
+    packs = coins//100
+    coins-= packs*100
+    print("{} packs".format(packs))
+    print("you will have ${:.2} and {} Apex Coins left".format(usd,coins))
+
+
+usdtoapex()
